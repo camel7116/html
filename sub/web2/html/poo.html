@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>놀이똥산</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- jqeury -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- jqeury ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(function(){
+            //메뉴 아이콘 클릭
+            $('.menu_open').click(function(){
+                $('.menu_all').slideDown(100);
+                $('header').addClass('bg');
+                $('.hd').addClass('on');
+           
+                //$('.menu_open').change('.menu_close');
+                $('.menu_open').hide();
+                $('.menu_close').show();
+            });
+            
+            $('.menu_close').click(function(){
+                $('.menu_all').slideUp(200);
+                $('.menu_open').show();
+                $('.menu_close').hide();
+                $('header').removeClass('bg');
+                $('.hd').removeClass('on');
+            });
+            var hdTop = $('header').offset().top;
+            // $=jqeury('태그').offset().top= 브라우저에서 헤더가 갖고있는 y축 값을 찾음
+            $(window).scroll(function(){
+                console.log(hdTop);
+                //화면을 스크롤 했을 때의 이벤트 실행코드
+                var windiwTop = $(window).scrollTop();
+                console.log(windiwTop);
+                if(hdTop < windiwTop){
+                    //header보다 스크롤바의 값이 더 클때 실행되는 값
+                    $('header').addClass('on');
+                }else{
+                    $('header').removeClass('on');
+                }
+            });
+           
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2.3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            var swiper = new Swiper(".eventSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+        });//jquery end
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+
+      </script>
+</head>
+<body>
+    <header>
+        <div class="hd"><img src="img/hd_bg.png" alt="!"></div>
+        <nav>
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="놀이똥산 로고" />
+                </a>
+            </h1>
+            <ul>
+                <li class="dep1">
+                    <a href="#">놀이똥산</a>
+                    <a href="#" class="dep1_on"><img src="img/gnb01.png" alt="롤 휴지 메뉴" /></a>
+                    <ul class="dep2">
+                        <li><a href="#">놀이똥산은?</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">오시는길</a></li>
+                        <li class="roll"><img src="img/dep2.png" alt="휴지 밑단"></li>
+                    </ul><!-- dep2 end -->
+                </li><!-- .dep1 end 1 -->
+                <li class="dep1">
+                    <a href="#">놀이똥산 즐기기</a>
+                    <a href="#" class="dep1_on"><img src="img/gnb02.png" alt="롤 휴지 메뉴" /></a>
+                    <ul class="dep2">
+                        <li><a href="#">놀이똥산 100배<br>즐기기</a></li>
+                        <li><a href="#">놀이똥산 꿀팁</a></li>
+                        <li class="roll"><img src="img/dep2.png" alt="휴지 밑단"></li>
+                    </ul><!-- dep2 end -->
+                </li><!-- .dep1 end 2 -->
+                <li class="dep1">
+                    <a href="#">미디어</a>
+                    <a href="#" class="dep1_on"><img src="img/gnb03.png" alt="롤 휴지 메뉴" /></a>
+                    <ul class="dep2">
+                        <li><a href="#">체험영상</a></li>
+                        <li><a href="#">체험사진</a></li>
+                        <li><a href="#">언론보도</a></li>
+                        <li><a href="#">SNS</a></li>
+                        <li class="roll"><img src="img/dep2.png" alt="휴지 밑단"></li>
+                    </ul><!-- dep2 end -->
+                </li><!-- .dep1 end 3 -->
+                <li class="dep1">
+                    <a href="#">예매하기</a>
+                    <a href="#" class="dep1_on"><img src="img/gnb04.png" alt="롤 휴지 메뉴" /></a>
+                    <ul class="dep2">
+                        <li><a href="#">놀이똥산 부산</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li class="roll"><img src="img/dep2.png" alt="휴지 밑단"></li>
+                    </ul><!-- dep2 end -->
+                </li><!-- .dep1 end 4 -->
+                <li class="dep1">
+                    <a href="#">이벤트</a>
+                    <a href="#" class="dep1_on"><img src="img/gnb05.png" alt="롤 휴지 메뉴" /></a>
+                    <ul class="dep2">
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li class="roll"><img src="img/dep2.png" alt="휴지 밑단"></li>
+                    </ul><!-- dep2 end -->
+                </li><!-- .dep1 end 5 -->
+                <li class="dep1">
+                    <a href="#">제휴문의</a>
+                    <a href="#" class="dep1_on"><img src="img/gnb06.png" alt="롤 휴지 메뉴" /></a>
+                </li><!-- .dep1 end 6 -->
+                <li class="menu">
+                    <i class="menu_open">
+                        <img src="img/menu.png" alt="메뉴열기" />
+                    </i>
+                    <i class="menu_close">
+                        <img src="img/menu_on.png" alt="메뉴닫기" />
+                    </i>
+                    <nav class="menu_all">
+                        <div>
+                            <img src="img/obj1.png" alt="obj1">
+                            <img src="img/obj4.png" alt="obj1">
+                            <img src="img/obj5.png" alt="obj1">
+                            <ul class="menu02">
+                                <li><a href="#">놀이똥산은?</a></li>
+                                <li><a href="#">이용안내</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul><!-- .menu02 end 1 -->
+                            <ul class="menu02">
+                                <li><a href="#">놀이똥산<br>100배 즐기기</a></li>
+                                <li><a href="#">놀이똥산 꿀팁</a></li>
+                            </ul><!-- .menu02 end 2 -->
+                            <ul class="menu02">
+                                <li><a href="#">체험영상</a></li>
+                                <li><a href="#">체험사진</a></li>
+                                <li><a href="#">언론보도</a></li>
+                                <li><a href="#">SNS</a></li>
+                            </ul><!-- .menu02 end 3 -->
+                            <ul class="menu02">
+                                <li><a href="#">놀이똥산 부산</a></li>
+                                <li><a href="#">문의하기</a></li>
+                            </ul><!-- .menu02 end 4 -->
+                            <ul class="menu02">
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul><!-- .menu02 end 5 -->
+                            <ul class="menu02">
+                                <li><span></span></li>
+                            </ul><!-- .menu02 end 5 -->                            
+                        </div>
+                    </nav>    
+                </li><!-- .menu end -->
+            </ul>
+        </nav>
+    </header>
+    <div class="main_visual">
+        <img src="img/main_visual.png" alt="메인 이미지" style="width: 100%; object-fit: contain;"/>
+    </div>
+    <section class="cont01">
+        <div class="object">
+            <div class="obj">
+                <img src="img/obj1.png" alt="연기 이미지1">
+                <img src="img/obj2.png" alt="연기 이미지1">
+                <img src="img/obj3.png" alt="연기 이미지1">
+                <img src="img/obj4.png" alt="연기 이미지1">
+                <img src="img/obj5.png" alt="연기 이미지1">
+                <img src="img/obj6.png" alt="연기 이미지1">
+                <img src="img/obj7.png" alt="연기 이미지1">
+                <img src="img/obj8.png" alt="연기 이미지1">
+            </div><!-- .obj end -->
+            <div class="enj">
+                <img src="img/enjoy1.png" alt="싸리 이미지">
+                <img src="img/enjoy2.png" alt="싸리 이미지">
+                <img src="img/enjoy3.png" alt="싸리 이미지">
+                <img src="img/poop_party.png" alt="이벤트 이미지">
+            </div><!-- .enj end -->
+        </div><!-- .object end -->
+        <div class="list">
+            <div class="title">
+                <div>
+                    <h3>놀이똥산 즐기기</h3>
+                    <strong>똥 친구 "싸리"와 애완견 휴지 "마리"가 살고있는 놀이똥산에서 즐겁고 색다른 추억을 만들어 보세요.</strong>
+                </div>
+                <div class="btn">
+                    <a href="#"><p>더보기</p></a>
+                </div>
+            </div><!-- .title end -->
+
+            <div class="box">
+                    <span><img src="img/cont01_01.jpg" alt="포토존 이미지" /></span>
+                <ul>
+                    <li>
+                        <h1>다양한 포토존</h1>
+                    </li>
+                    <li>
+                        <p>놀이똥산에 오신 여러분! 환영합니다!<br>
+                        똥을 주제로 한 다양한 포토존에서 특별한 인생샷을<br>남겨보세요!</p>
+                    </li>
+                </ul>
+            </div><!-- .box end -->
+            <div class="box">
+                <ul>
+                    <li>
+                        <h1>다이나믹한 소화메이즈</h1>
+                    </li>
+                    <li>
+                        <p>입으로 들어가서 똥이 되어 만나자!<br>
+                        식도, 위, 소장, 대장 등 소화기관을 탐험하는<br>
+                        색다른 미로 탈출을 경험하세요!</p>
+                    </li>
+                </ul>
+                <span><img src="img/cont01_02.jpg" alt="소화메이즈 이미지" /></span>
+            </div><!-- .box end -->
+            <div class="box">
+                <span><img src="img/cont01_03.jpg" alt="포토존 이미지" /></span>
+                <ul>
+                    <li>
+                        <h1>신나는 푸 파티</h1>
+                    </li>
+                    <li>
+                        <p>'똥'스럽게 놀아보자!<br>
+                        싸리, 마리와 함께 신기방기한 똥의 세계를 즐겨보세요!</p>
+                    </li>
+                </ul>
+            </div><!-- .box end -->
+        </div>
+    </section><!-- .cont01 end -->
+    <section class="cont02">
+        <div class="title">
+            <h3>놀이똥산 미디어</h3>
+            <strong>놀이똥산의 새로운 소식들을 만나보세요!</strong>
+        </div>
+        <div class="content">
+            <div class="youtube_wrap">
+                <div class="youtube">
+                    <iframe width="1200" height="675" src="https://www.youtube.com/embed/-3ZdGqv8pGQ" title="부산에서 제일 귀여운 으른은 서면 놀이똥산으로 꺼먼! 부산[놀이똥산]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div><!-- .youtube end -->
+                <div class="info">
+                    <h4>부산에서 제일 귀여운 으른은 서면 놀이똥산으로 꺼먼! 부산[놀이똥산]</h4>
+                </div><!-- .info end -->
+            </div><!-- .youtube_wrap end -->
+            <div class="swiper mySwiper">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="more">
+                    <a href="#">더보기</a>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box01.png" alt="스포츠 서울">
+                            <div>
+                                <p>NEWS</p>
+                                <h5>[스포츠서울] '함 뛰볼까예'<br>런닝맨과 놀이똥산 부산점 오픈</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box02.jpg" alt="클럽">
+                            <div>
+                                <p>PHOTO</p>
+                                <h5>[놀이똥산 부산]<br>응가 푸(POO) 클럽</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box03.jpg" alt="볼풀장 변기">
+                            <div>
+                                <p>PHOTO</p>
+                                <h5>[놀이똥산 부산]<br>볼풀장 변기!?</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box04.jpg" alt="똥줄">
+                            <div>
+                                <p>PHOTO</p>
+                                <h5>[놀이똥산 부산]<br>똥줄을 타보자</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box05.jpg" alt="똥통">
+                            <div>
+                                <p>PHOTO</p>
+                                <h5>[놀이똥산 부산]<br>똥통을 번쩍</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box06.png" alt="DJ">
+                                <div>
+                                    <p>PHOTO</p>
+                                    <h5>DJ싸리와 함께하는 푸파티!</h5>
+                                </div>
+                            </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box07.png" alt="소화메이즈">
+                            <div>
+                                <p>PHOTO</p>
+                                <h5>소화메이즈로 출바알~!</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="img/box08.png" alt="소화메이즈">
+                            <div>
+                                <p>PHOTO</p>
+                                <h5>놀이똥산 소화메이즈</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div><!-- .content end -->
+    </section><!-- .cont02 end -->
+    <section class="cont03">
+        <img src="img/obj8.png" alt="구름이미지">
+        <div class="title">
+            <div>
+                <h3>이벤트</h3>
+                <strong>놀이똥산만의 특별한 이벤트!</strong>
+            </div>
+            <div><span></span></div>
+        </div><!-- .title end -->
+        <div class="event">
+            <div class="swiper eventSwiper">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="cut">
+                            <a href="#"><img src="img/event1.png" alt="복, 선물" /></a>
+                        </div>
+                        <div class="event_text">
+                            <h5>2월 SNS 이벤트</h5>
+                            <p>이벤트 기간: 2022년 2월 7일 (월) ~ 2월 28일 (월)</p>
+                            <a href="#">이벤트 참여하기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="cut">
+                            <a href="#"><img src="img/event2.png" alt="복, 선물" /></a>
+                        </div>
+                        <div class="event_text">
+                            <h5>현대백화점 모바일카드<br>제휴 이벤트 (놀이똥산)</h5>
+                            <p>이벤트 기간: 2020년 9월 1일 (화) ~ 2021년 9월 1일 (수)</p>
+                            <a href="#">이벤트 참여하기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="cut">
+                            <a href="#"><img src="img/event3.png" alt="복, 선물" /></a>
+                        </div>
+                        <div class="event_text">
+                            <h5>백신접종자 할인 이벤트!<br>백신 맞았으면 할인 받자!</h5>
+                            <p>이벤트 기간: 2021년 7월 6일 (화) ~ 8월 31일 (화)</p>
+                            <a href="#">이벤트 참여하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- .cont03 end -->
+    <div class="location_bg">
+        <img src="img/location_bg.png" alt="백그라운드 굴곡">
+    </div>
+    <section class="location">
+        <div>
+            <strong>놀이똥산 부산</strong>
+            <p>부산시 부산진구 중앙대로 삼정타워 672 10층</p>
+            <a href="tel:051.520.3636">051.520.3636</a>
+        </div>
+        <img src="img/location_busan.png" alt="지도이미지">
+        <div class="footer_bg"><img src="img/ft_bg.png" alt="푸터bg"></div>
+    </section>
+    
+    <footer>
+        <div>
+            <img src="img/logo.png" alt="로고">
+            <div>
+                <strong><a href='#'>개인정보처리방침ㅣ이용약관</a></strong>
+                <p>대표이사 김태훈</p>
+                <strong>놀이똥산 부산</strong>
+                <p>사업자등록번호 165-88-01468ㅣ주소 부산시 부산진구 중앙대로 672,10층(부전동)<br>
+                대표전화 051-520-3636</p>
+            </div>
+            <form>
+                <div>
+                    <select>
+                        <option>놀이똥산 패밀리사이트</option>
+                        <option>크리에이티브 통</option>
+                        <option>박물관은 살아있다</option>
+                        <option>런닝맨Ep.2 부산 서면점</option>
+                        <option>런닝맨Ep.3 강릉점</option>
+                        <option>다이나믹 메이즈</option>
+                        <option>얼라이브 하트</option>
+                        <option>대구아쿠아리움</option>
+                        <option>한번에 보기</option>
+                    </select>
+                    <a href="#"><img src="img/icon_face.png" alt="페이스북 아이콘"></a>
+                </div>
+            </form>
+            <div class="top"><a href="#"><img src="img/top.png" alt="상단으로 가기"></a></div>
+        </div>
+    </footer>
+</body>
+</html>
