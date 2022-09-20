@@ -1,6 +1,15 @@
 @charset "utf-8";
 
-/* 노토산스 */
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-/* 나눔스퀘어 */
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@font-face {
+    font-family: 'HYShortSamul';
+    src: url('H2sa1M.eot');
+    src: url('H2sa1M.eot?#iefix') format('embedded-opentype'),
+        url('H2sa1M.woff2') format('woff2'),
+        url('H2sa1M.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
