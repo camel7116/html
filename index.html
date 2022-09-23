@@ -19,12 +19,16 @@
     
     <!-- jqeury.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jqeury ui js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- fancybox 3 js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- full page js -->
     <script src="lib/dist/fullpage.js"></script>
+    <script src="lib/bg.js"></script>
     <script>
         $(function(){
             var swiper = new Swiper(".mySwiper", {
@@ -47,7 +51,13 @@
                 $('.mySwiper').eq($(this).index()).addClass('on');
 
             });
-
+            $('.inner nav ul li').click(function(){
+                var page = $('section').eq($(this).index());
+                var pageTop = page.offset().top;
+                $('html, body').animate({
+                    scrollTop : pageTop
+                }, 1000, 'ease');
+            });
         });//jquery end
     </script>
 
@@ -61,7 +71,7 @@
     <header>
         <div class="inner">
             <h1>
-                <a href="#">
+                <a href="#1stPage">
                     <ul>
                         <ul>
                             <li>WEB DESIGNER</li>
@@ -74,10 +84,10 @@
             </h1>
             <nav>
                 <ul>
-                    <li><a href="#">영상편집</a></li>
-                    <li><a href="#">웹디자인/웹퍼블리싱</a></li>
-                    <li><a href="#">2D디자인</a></li>
-                    <li><a href="#">나의소개</a></li>
+                    <li><a href="#2ndPage">영상편집</a></li>
+                    <li><a href="#3rdPage">웹디자인/웹퍼블리싱</a></li>
+                    <li><a href="#4thPage">2D디자인</a></li>
+                    <li><a href="#5thPage">나의소개</a></li>
                 </ul>
             </nav>
         </div><!-- .inner end -->
@@ -86,7 +96,7 @@
         <div class="section " id="section0">
             <section class="main_visual">
                 <img src="img/main.png" alt="메인비주얼" />
-                <div class="inner">
+                <div class="inner" id="bg">
                     <p>Motion Graphic Designer</p>
                     <h2>KimJaeHoon<br>Designer</h2>
                 </div><!-- .inner end -->
@@ -328,6 +338,14 @@
         </div>
         <div class="section" id="section2">
             <section class="cont03">
+                <div class="bg_move">
+                    <div>
+                        <img src="img/bg_move.png" alt="움직이는 백그라운드">
+                    </div>
+                    <div>
+                        <img src="img/bg_move.png" alt="움직이는 백그라운드">
+                    </div>
+                </div>
                 <div class="title inner">
                     <h3>WEB DESIGN</h3>
                     <p>접근성, 호환성을 고려한 웹사이트 리뉴얼</p>
@@ -362,8 +380,8 @@
                                 <li><strong>제작일자</strong> : 2022.08</li>
                             </ul><!-- .text end -->
                             <ul class="btn">
-                                <li><a href="sub/web2/styleguide.jpg">기획서및작업과정</a></li>
-                                <li><a href="sub/web2/html/poo.html">사이트보기</a></li>
+                                <li><a href="sub/web2/styleguide.jpg" target="_blank">기획서및작업과정</a></li>
+                                <li><a href="sub/web2/html/poo.html" target="_blank">사이트보기</a></li>
                             </ul><!-- .btn end -->
                         </div><!-- .info end -->
                     </div><!-- .item end 2 -->
@@ -379,8 +397,8 @@
                                 <li><strong>제작일자</strong> : 2022.08</li>
                             </ul><!-- .text end -->
                             <ul class="btn">
-                                <li><a href="sub/web2/styleguide.jpg">기획서및작업과정</a></li>
-                                <li><a href="">사이트보기</a></li>
+                                <li><a href="sub/web2/styleguide.jpg" target="_blank">기획서및작업과정</a></li>
+                                <li><a href="sub/web3/html/hite.html" target="_blank">사이트보기</a></li>
                             </ul><!-- .btn end -->
                         </div><!-- .info end -->
                     </div><!-- .item end 2 -->
@@ -395,43 +413,63 @@
                         <h3>Graphic DESIGN</h3>
                         <p>2D, 3D그래픽을 포토샵, 일러스트레이터를 이용하여 디자인을 제작하였습니다.</p>
                     </div><!-- .title end -->
-                    <div class="list">
-                        <a href="img/04_펜툴이미지.jpg"data-fancybox="preview">
-                            <img src="img/04_펜툴이미지.jpg" alt="무슨 이미지">
-                            <div class="info">
-                                <h4>가을 플라워 피크닉 페스티벌</h4>
-                                <p>포토샵</p>
+                    <div class="item">
+                        <div class="transition">
+                            <div class="list">
+                                <a href="img/04_펜툴이미지.jpg"data-fancybox="preview">
+                                    <img src="img/04_펜툴이미지.jpg" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>가을 플라워 피크닉 페스티벌</h4>
+                                        <p>포토샵</p>
+                                    </div>
+                                </a><!-- 1 -->
                             </div>
-                        </a><!-- 1 -->
-                        <a href="img/마쯔리야.jpg" data-fancybox="preview">
-                            <img src="img/마쯔리야.jpg" alt="무슨 이미지">
-                            <div class="info">
-                                <h4>서면 마쯔리야(insta)</h4>
-                                <p>포토샵</p>
                             </div>
-                        </a><!-- 2 -->
-                        <a href="img/원피스.png" data-fancybox="preview">
-                            <img src="img/원피스.png" alt="무슨 이미지">
-                            <div class="info">
-                                <h4>캐릭터 일러스트</h4>
-                                <p>일러스트레이터</p>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/마쯔리야.jpg" data-fancybox="preview">
+                                    <img src="img/마쯔리야.jpg" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>서면 마쯔리야(insta)</h4>
+                                        <p>포토샵</p>
+                                    </div>
+                                </a><!-- 2 -->
                             </div>
-                        </a><!-- 3 -->
-                        <a href="img/카페_샘플이미지.png" data-fancybox="preview">
-                            <img src="img/카페_샘플이미지.png" alt="무슨 이미지">
-                            <div class="info">
-                                <h4>커피 일러스트</h4>
-                                <p>일러스트레이터</p>
                             </div>
-                        </a><!-- 4 -->
-                        <a href="img/해바라기.jpg" data-fancybox="preview">
-                            <img src="img/해바라기.jpg" alt="무슨 이미지">
-                            <div class="info">
-                                <h4>그래픽디자인 제목</h4>
-                                <p>사용한 프로그램</p>
-                            </div><!-- .info end -->
-                        </a><!-- 5 -->
-                    </div><!-- .list end -->
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/원피스.png" data-fancybox="preview">
+                                    <img src="img/원피스.png" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>캐릭터 일러스트</h4>
+                                        <p>일러스트레이터</p>
+                                    </div>
+                                </a><!-- 3 -->
+                            </div>
+                            </div>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/bhc-신메뉴(web).gif" data-fancybox="preview">
+                                    <img src="img/bhc-신메뉴(sns).gif" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>메뉴 디자인</h4>
+                                        <p>일러스트레이터, 포토샵</p>
+                                    </div>
+                                </a><!-- 4 -->
+                            </div>
+                            </div>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/해바라기.jpg" data-fancybox="preview">
+                                    <img src="img/해바라기.jpg" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>그래픽디자인 제목</h4>
+                                        <p>사용한 프로그램</p>
+                                    </div><!-- .info end -->
+                                </a><!-- 5 -->
+                            </div>
+                            </div>
+                    </div>
                 </div><!-- .inner end -->
             </section><!-- .cont04 end -->
         </div>
@@ -444,8 +482,12 @@
                     </div><!-- .title end -->
 
                     <div class="info">
+                        <div class="bg_img">
+                            <img src="img/cont05_bg_img1.png" alt=" 몸통샷">
+                            <img src="img/cont05_bg_img2.png" alt=" 몸통샷">
+                        </div>
                         <div class="info_img">
-                            <img src="img/미식여행.jpg" alt="임시 이미지" />
+                            <img src="img/프로필이미지.jpg" alt="임시 이미지" />
                         </div><!-- .info_img end -->
                         <div class="text">
                             <ul>
@@ -501,7 +543,7 @@
     </div>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
-                anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', 'footer'],
+                anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', 'footer'],
                 //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
                 navigation: true,
                 navigationPosition: 'right',
