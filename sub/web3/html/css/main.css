@@ -44,7 +44,7 @@ header .left h3{
 }
 header .left .drink:nth-of-type(1)::before{
     content: '';
-    background-color: #272727;
+    background-color: #ffbf00;
     right: 0;
     top: 0;
     width: 150px;
@@ -153,6 +153,27 @@ header .left .drink:nth-of-type(7):hover::before{
     position: absolute;
     transition-duration: 0.4s;
 }
+header .left .requid .drink:nth-of-type(1):hover .two{
+    background-color: #ffbf00;
+}
+header .left .requid .drink:nth-of-type(2):hover .two{
+    background-color: #99CC41;
+}
+header .left .requid .drink:nth-of-type(3):hover .two{
+    background-color: #F68A0A;
+}
+header .left .requid .drink:nth-of-type(4):hover .two{
+    background-color: #7436B5;
+}
+header .left .requid .drink:nth-of-type(5):hover .two{
+    background-color: #2DABDF;
+}
+header .left .requid .drink:nth-of-type(6):hover .two{
+    background-color: #FF617F;
+}
+header .left .requid .drink:nth-of-type(7):hover .two{
+    background-color: #727272;
+}
 header .left .lnav .requid{
     height: 100%;
     width: 100%;
@@ -168,7 +189,7 @@ header .left .lnav .requid .drink{
     justify-content: space-around;
 }
 header .left .lnav .requid .drink a{
-    padding: 25px;
+    padding: 15px 25px;
 }
 header .left .lnav .requid .drink a img{
     height: 50px;
@@ -235,10 +256,15 @@ header .left .requid .drink{
 header .left .requid .drink:hover:nth-of-type(1) .depth01 .depth02_01{
     display: block;
 }
-header .left .requid .drink .depth01 .depth02_01{
+header .left .requid .drink .depth01{
     position: relative;
-    left: 80px;
-    top: 0;
+    height: 120px;
+    top: 60px;
+    left: 50px;
+}
+header .left .requid .drink .depth01 .depth02_01{
+    position: absolute;
+    width: 100px;
     margin-bottom: 10px;
     display: none;
 }
