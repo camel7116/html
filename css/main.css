@@ -204,15 +204,47 @@ header .inner nav ul li a{
     position: relative;
     width: 100%;
     padding: 80px 0;
+    overflow: hidden;
 }
-.cont01 .bg_img{
+.cont01 > .inner .bg_move{
     position: absolute;
-    z-index: -999999; opacity: 50%;
-    top: 0;right: 30%;
-    transform:translateX(50%);
+    opacity: 15%;
+    width: 100%;
 }
-.cont01 .bg_img img{
-    height: 900px;
+.cont01 > .inner .bg_move > .right li{
+    position: absolute;
+    right: 25%;
+    top: 15%;
+}
+.cont01 > .inner .bg_move > .left li{
+    position: absolute;
+    left: -10%;
+    top: 500px;;
+}
+.cont01 > .inner .bg_move > ul li img{
+    width: 300px;
+    height: 300px;
+}
+.cont01 > .inner .bg_move > ul li:nth-of-type(2) img{
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+}
+.cont01 > .inner .bg_move > ul:nth-of-type(2) li:nth-of-type(1){
+    white-space: nowrap;
+    animation: animate0 5s linear infinite;
+}
+@keyframes animate0 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+.cont01 > .inner .bg_move > ul li:nth-of-type(1){
+    white-space: nowrap;
+    animation: animate4 10s linear infinite;
+}
+@keyframes animate4 {
+        100%{transform: rotate(0deg);}
+        0%{transform: rotate(-360deg);}
 }
 .cont01 .motion_menu{
     display: flex;
@@ -495,11 +527,11 @@ header .inner nav ul li a{
 
 /* .cont04 */
 .cont04{
-    background: #69894c;
     height: 100vh;
     color: #fff;
     padding: 150px 0;
     position: relative;
+    overflow: hidden;
 }
 .cont04 .title{
     text-align: center;
@@ -521,11 +553,13 @@ header .inner nav ul li a{
     z-index: 999;
     margin: 0 auto;
     width: 80vw;
+    height: 40vh;
     display: flex;
     justify-content: space-between;
 }
 .cont04 .item .list{
     width: 15.5vw;
+    height: 100%;
     background-color: #fff;
     position: relative;
     transition: 0.4s;
@@ -544,19 +578,24 @@ header .inner nav ul li a{
 }
 .cont04 .list a img{
     width: 100%;
-    height: 40vh;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 .cont04 .item .list:hover{
-    scale: 1.02;
     box-shadow: 0 0 0 4px #444;
 }
 
 .cont04 .list a .info{
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;
+    color: #fff;
+    border-radius: 40px;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+.cont04 .list a:hover .info{
+    color: #fcff00;
 }
 .cont04 .list a .info h4{
     font-size: 20px;
@@ -569,12 +608,15 @@ header .inner nav ul li a{
     opacity: 0;
     transition: 0.5s;
 }
-.fp-viewing-4thPage .inner .transition:nth-of-type(1) {opacity: 1; transition: 0.5s; }
+.fp-viewing-4thPage .inner .transition:nth-of-type(1) {opacity: 1; transition: 0.5s 0.5s;}
 .fp-viewing-4thPage .inner .transition:nth-of-type(2) {opacity: 1; transition: 0.5s 1s;}
 .fp-viewing-4thPage .inner .transition:nth-of-type(3) {opacity: 1; transition: 1s 1.5s;}
 .fp-viewing-4thPage .inner .transition:nth-of-type(4) {opacity: 1; transition: 1.5s 2s;}
 .fp-viewing-4thPage .inner .transition:nth-of-type(5) {opacity: 1; transition: 2s 2.5s;}
 
+.cont04 {
+    background-image: url('../img/coffee.gif');
+}
 
 
 /* .cont05 나의소개 */
@@ -749,15 +791,38 @@ footer p{
     margin-right: 5px;
     text-shadow: 1px 1px  #444;
 }
+.fp-viewing-1stPage header{
+    transition-duration: 0.4s;
+}
+.fp-viewing-2ndPage header{
+    background: none;
+    transition-duration: 0.4s;
+}
 .fp-viewing-3rdPage header{
     background: none;
+    transition-duration: 0.4s;
 }
 .fp-viewing-4thPage header{
-    background-color: #69894c;
+    background: none;
+}
+.fp-viewing-5thPage header{
+    background: none;
+    transition-duration: 0.4s;
+}
+.fp-viewing-6thPage header{
+    transition-duration: 0.4s;
+}
+.fp-viewing-3rdPage header h1 a ul ul li{
+    transition-duration: 0.4s;
 }
 .fp-viewing-4thPage header h1 a ul ul li:nth-of-type(1){
     color: #fff;
+    transition-duration: 0.4s;
 }
 .fp-viewing-4thPage header h1 a ul ul li:nth-of-type(3){
     color: #fff;
+    transition-duration: 0.4s;
+}
+.fp-viewing-5thPage header h1 a ul ul li{
+    transition-duration: 0.4s;
 }

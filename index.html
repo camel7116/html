@@ -58,6 +58,38 @@
                     scrollTop : pageTop
                 }, 1000, 'ease');
             });
+            
+            let listDiv = $('.transition .list');
+
+            //마우스 올렸을 때 
+            //mouseenter() 메소드
+
+            //마우스 벗어났을 때
+            //mouseleave() 메소드
+
+            $(listDiv).mouseenter(function () {
+                $(this).css({
+                    //'속성' : '속성값'
+                    'width': '20vw',
+                    'transition': '0.4s'
+                });
+
+                //siblings => 나를 제외한 형제선택자
+                //내가 마우스 올린 선택자를 제외한
+                //형제선택자에게 
+                //width값을 19% 
+                $(this).siblings().css({
+                    'width': '15.5vw',
+                    'transition': '0.4s'
+                });
+
+            });//div한테 마우스 올렸을 
+
+            $(listDiv).mouseleave(function () {
+                $(listDiv).css({
+                    'width': '14.7vw'
+                });
+            });
         });//jquery end
     </script>
 
@@ -105,8 +137,15 @@
         <div class="section" id="section1">
             <section class="cont01">
                 <div class="inner">
-                    <div class="bg_img">
-                        <img src="img/bg1.png" alt="">
+                    <div class="bg_move">
+                        <ul class="right">
+                            <li><img src="img/cont01_bg_move.png" alt="circle"></li>
+                            <li><img src="img/cont01_bg_move2.png" alt="youtube_logo"></li>
+                        </ul>
+                        <ul class="left">
+                            <li><img src="img/cont01_bg_move.png" alt="circle"></li>
+                            <li><img src="img/cont01_bg_move2.png" alt="youtube_logo"></li>
+                        </ul>
                     </div>
                     <div class="title">
                         <h3>Video Editing</h3>
@@ -387,7 +426,7 @@
                     </div><!-- .item end 2 -->
 
                     <div class="item"><!-- 3 -->
-                        <img src="img/playground.png" alt="하이트진로"/>
+                        <img src="img/cont03_jinro.jpg" alt="하이트진로"/>
                         <div class="info">
                             <h4>하이트진로 리뉴얼</h4>
                             <p>제작목적, 컨셉, 웹사이트 리뉴얼을 위한<br> 기획, 디자인, html, css언어를 활용하여<br> 웹사이트를 구현했습니다.</p>
@@ -419,7 +458,7 @@
                                 <a href="img/04_펜툴이미지.jpg"data-fancybox="preview">
                                     <img src="img/04_펜툴이미지.jpg" alt="무슨 이미지">
                                     <div class="info">
-                                        <h4>가을 플라워 피크닉 페스티벌</h4>
+                                        <h4>피크닉 페스티벌</h4>
                                         <p>포토샵</p>
                                     </div>
                                 </a><!-- 1 -->
