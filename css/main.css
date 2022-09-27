@@ -846,7 +846,7 @@ footer img{
 
 /* media 576*/
 
-@media (max-width:500px){
+@media (max-width:576px){
     header{
         height: 50px;
     }
