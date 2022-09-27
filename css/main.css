@@ -859,8 +859,8 @@ footer img{
         color: #fff;
     }
     header h1{
-        font-size: 20px;
-        margin-left: 50px;
+        font-size: 16px;
+        margin-left: 20px;
     }
     header .inner{
         width: 100%;
@@ -1248,9 +1248,7 @@ footer img{
     .cont05 .bg_img img{
         display: none;
     }
-    .fp-section:nth-last-of-type(1){
-        height: 310px;
-    }
+
     footer img{
         right: 10%;
         top: 25%;
