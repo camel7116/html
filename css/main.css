@@ -31,7 +31,6 @@ body{
     line-height: 1;
     font-family: 'Gowun Dodum';
     cursor: default;
-    min-width: 1920px;
 }
 /* common */
 .inner{
@@ -848,9 +847,6 @@ footer img{
 /* media 576*/
 
 @media (max-width:576px){
-    body{
-        overflow: hidden;
-    }
     header{
         height: 50px;
     }
