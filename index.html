@@ -31,6 +31,18 @@
     <script src="lib/bg.js"></script>
     <script>
         $(function(){
+            $('.gnb a').click(function(e){
+                e.preventDefault(); // a링크 방지
+            });
+
+            //메뉴 아이콘 클릭
+            $('.menu_open').click(function(){
+                $('.gnb_all').slideDown(1000, 'easeOutBounce');
+            });
+            $('.menu_close').click(function(){
+                $('.gnb_all').slideUp(1000, 'easeOutBounce');
+
+            });
             var swiper = new Swiper(".mySwiper", {
                 pagination: {
                 el: ".swiper-pagination",
@@ -116,7 +128,17 @@
                     </ul>
                 </a>
             </h1>
-            <nav>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#2ndPage">영상편집</a></li>
+                    <li><a href="#3rdPage">웹디자인/웹퍼블리싱</a></li>
+                    <li><a href="#4thPage">2D디자인</a></li>
+                    <li><a href="#5thPage">나의소개</a></li>
+                </ul>
+            </nav>
+            <i class="menu_open xi-bars"></i>
+            <nav class="gnb_all">
+                <i class="menu_close xi-close"></i>
                 <ul>
                     <li><a href="#2ndPage">영상편집</a></li>
                     <li><a href="#3rdPage">웹디자인/웹퍼블리싱</a></li>
