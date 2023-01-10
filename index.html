@@ -31,16 +31,13 @@
     <script src="lib/bg.js"></script>
     <script>
         $(function(){
-            $('.gnb a').click(function(e){
-                e.preventDefault(); // a링크 방지
-            });
 
             //메뉴 아이콘 클릭
             $('.menu_open').click(function(){
                 $('.gnb_all').slideDown(1000, 'easeOutBounce');
             });
             $('.menu_close').click(function(){
-                $('.gnb_all').slideUp(1000, 'easeOutBounce');
+                $('.gnb_all').slideUp(1000, 'easeInBounce');
 
             });
             var swiper = new Swiper(".mySwiper", {
@@ -177,17 +174,15 @@
                     </div><!-- .title end -->
                     <div class="motion_menu">
                         <ul>
-                            <li class="on">게임</li>
-                            <li>홍보영상</li>
-                            <li>인포그래픽</li>
+                            <li class="on">쇼릴</li>
                             <li>브이로그</li>
-                            <li>뮤비티저</li>
+                            <li>인포그래픽</li>
                         </ul>
                     </div><!-- .motion_menu end -->
 
                     <!-- swiper slide -->
 
-                    <!-- .motion_menu 1 게임 -->
+                    <!-- .motion_menu 1 쇼릴 -->
                     <div class="pc">
                         <div class="swiper mySwiper on">
                             <div class="swiper-wrapper">
@@ -198,13 +193,13 @@
                                             <img src="img/pc_img.png" alt="모니터 이미지" />
                                             <div class="youtube">
                                                 <div>
-                                                    <iframe width="400" height="225" src="https://www.youtube.com/embed/4EhjlB-wrdw" title="현재 넷플릭스 1위!! 주연들 미친 연기력으로 압도적 몰입감을 선사하는 개꿀잼 신작 느와르 한국 드라마《수리남》 처음부터 끝까지 한 방에 몰아보기!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/2-fgRCNSojs" title="쇼릴영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                                 </div>
                                             </div><!-- .youtube end -->
                                         </div><!-- .pc_youtube end -->
                                         <div class="info">
                                             <strong>촬영, 출연, 편집, 디자인, 특수효과</strong>
-                                            <h4>포트폴리오 동영상</h4>
+                                            <h4>쇼릴영상</h4>
                                             <p>컨셉 및 제작목적 국가는 지역간의 균형있는 발전을 위하여 
                                                 지역경제를 육성할 의무를 진다. 환경권의 내용과 행사에 관하여는 
                                                 법률로 정한다. 광물 기타 중요한 지하자원·수산자원·수력과 
@@ -215,7 +210,7 @@
                                                     <li><strong>제작일자</strong>: 2022. 09</li>
                                                 </ul><!-- .text end -->
                                                 <ul class="btn">
-                                                    <li><a href="#">영상원본보기</a></li>
+                                                    <li><a href="https://www.youtube.com/watch?v=2-fgRCNSojs">영상원본보기</a></li>
                                                     <li><a href="#">기획서보기</a></li>
                                                 </ul>
                                         </div><!-- .info end -->
@@ -268,7 +263,7 @@
                                             <img src="img/pc_img.png" alt="모니터 이미지" />
                                             <div class="youtube">
                                                 <div>
-                                                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/2TkIvqUfmc0" title="(eng)개복치 누가 맛없다고 함? 안 먹으면 개손해 Giant Sunfish Cutting & Cooking Recipe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/QObgRGmC-BM" title="크리스마스이브 엘리와 맴무 쇼핑로그" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                                 </div>
                                             </div><!-- .youtube end -->
                                         </div><!-- .pc_youtube end -->
@@ -337,7 +332,7 @@
                                             <img src="img/pc_img.png" alt="모니터 이미지" />
                                             <div class="youtube">
                                                 <div>
-                                                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/jhdTYEchWmI" title="면접 갑질 오지게 했는데, 하필 대기업 차장 출신, 산전수전 다 겪은 경력직이었다..! 아..ㅋㅋㅋㅋㅋㅋ 진짜 태어나서 본 드라마 중 제일 웃김 ㅋㅋ ≪위기의X≫" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/Up2dq0K-qr0" title="국민취업지원제도 홍보영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                                 </div>
                                             </div><!-- .youtube end -->
                                         </div><!-- .pc_youtube end -->
@@ -354,7 +349,7 @@
                                                     <li><strong>제작일자</strong>: 2022. 09</li>
                                                 </ul><!-- .text end -->
                                                 <ul class="btn">
-                                                    <li><a href="#">영상원본보기</a></li>
+                                                    <li><a href="https://youtu.be/Up2dq0K-qr0">영상원본보기</a></li>
                                                     <li><a href="#">기획서보기</a></li>
                                                 </ul>
                                         </div><!-- .info end -->
@@ -533,6 +528,63 @@
                             </div>
                             </div>
                     </div>
+                    <div class="item">
+                        <div class="transition">
+                            <div class="list">
+                                <a href="img/04_펜툴이미지.jpg"data-fancybox="preview">
+                                    <img src="img/04_펜툴이미지.jpg" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>피크닉 페스티벌</h4>
+                                        <p>포토샵</p>
+                                    </div>
+                                </a><!-- 1 -->
+                            </div>
+                            </div>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/마쯔리야.jpg" data-fancybox="preview">
+                                    <img src="img/마쯔리야.jpg" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>서면 마쯔리야(insta)</h4>
+                                        <p>포토샵</p>
+                                    </div>
+                                </a><!-- 2 -->
+                            </div>
+                            </div>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/원피스.png" data-fancybox="preview">
+                                    <img src="img/원피스.png" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>캐릭터 일러스트</h4>
+                                        <p>일러스트레이터</p>
+                                    </div>
+                                </a><!-- 3 -->
+                            </div>
+                            </div>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/bhc-신메뉴(web).gif" data-fancybox="preview">
+                                    <img src="img/bhc-신메뉴(sns).gif" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>메뉴 디자인</h4>
+                                        <p>일러스트레이터, 포토샵</p>
+                                    </div>
+                                </a><!-- 4 -->
+                            </div>
+                            </div>
+                            <div class="transition">
+                            <div class="list">
+                                <a href="img/해바라기.jpg" data-fancybox="preview">
+                                    <img src="img/해바라기.jpg" alt="무슨 이미지">
+                                    <div class="info">
+                                        <h4>그래픽디자인 제목</h4>
+                                        <p>사용한 프로그램</p>
+                                    </div><!-- .info end -->
+                                </a><!-- 5 -->
+                            </div>
+                            </div>
+                    </div>
                 </div><!-- .inner end -->
             </section><!-- .cont04 end -->
         </div>
@@ -550,7 +602,7 @@
                             <img src="img/cont05_bg_img2.png" alt=" 몸통샷">
                         </div>
                         <div class="info_img">
-                            <img src="img/프로필이미지.jpg" alt="임시 이미지" />
+                            <img src="img/증명사진.jpg" alt="임시 이미지" />
                         </div><!-- .info_img end -->
                         <div class="text">
                             <ul>
