@@ -46,6 +46,10 @@ html.fp-enabled,
     justify-content: center;
     width: 100%;
 }
+.fp-table:nth-last-of-type(1){
+    height: 40vh;
+    width: 100%;
+}
 /* .fp-table::before , 
 .fp-table::after {
       content:'';
