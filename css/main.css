@@ -564,7 +564,8 @@ header .inner i{
     z-index: 999;
     margin: 0 auto;
     width: 80vw;
-    height: 40vh;
+    height: 20vh;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -883,7 +884,7 @@ footer img{
         position: fixed;
         top: 0;
         right: 0.5%;
-        background-color: #bc7474;
+        background-color: #333333;
         width: 180px;
         text-align: center;
         height: 250px;
