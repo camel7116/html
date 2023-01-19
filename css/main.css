@@ -577,7 +577,7 @@ header .inner i{
     transition: 0.4s;
 
 }
-.cont04 .item .transition:nth-of-type(1) .list::after{
+.cont04 .inner .item .transition:nth-of-type(1) .list::after{
     content: 'Click!';
     position: absolute;
     top: -20px;left: -20px;
